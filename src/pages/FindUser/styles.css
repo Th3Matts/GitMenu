@@ -1,0 +1,43 @@
+#page-user-list{
+  width: 100vw;
+  height: 100vh;
+}
+
+#search-users{
+  margin-top: 3.2rem;
+}
+
+#search-users label{
+  color: var(--color-title-in-primary);
+}
+
+#page-user-list main{
+  margin: 3.2rem auto;
+  width: 90%;
+}
+
+@media (min-width: 700px){
+  #page-user-list{
+    max-width: 100%;
+  }
+
+   #search-users {
+    display: grid;
+    column-gap: 16px;
+    position: absolute;
+    bottom: -29px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "input search" ;
+  }
+
+  #search-users .input-block + .input-block{ 
+    grid-area: input;
+    width: 15rem;
+  }
+
+  #page-user-list main{
+    padding: 32px 0;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+}
